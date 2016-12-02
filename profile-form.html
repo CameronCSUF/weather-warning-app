@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+ div.row {padding: 10px;}
+
+</style>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="CS 254 Web UI">
+    <meta name="author" content="CS 254 Students">
+
+    <title>Weather Warning</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/custom/bootstrap.min.css" rel="stylesheet">
+
+    <link type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.css" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/js/bootstrap-timepicker.min.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+</head>
+
+<body class="col-xs-offset-1" style="max-width:1000px;">
+	<h1>Profile</h1>
+	<p>Update your settings for your alerts. Dont't forget to hit submit.</p>
+	<form action="profileForm.py">
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="first-name">First name:&#42</label> 
+		</div>
+		<div class="col-sm-20">
+			<input type="text" id="first-name" name="fname"><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="last-name">Last name:&#42</label> 
+		</div>
+		<div class="col-sm-20">
+			<input type="text" id="last-name" name="lname"><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="city">City:&#42</label> 
+		</div>
+		<div class="col-sm-20">
+			<input type="text" id="city" name="lname"><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="state">State:&#42</label> 
+		</div>
+		<div class="col-sm-20">
+			<input type="text" name="state"><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="temp">Temperature in Farenheit&#42</label> 
+		</div>
+		<div class="col-sm-20">
+			<input type="text" name="temperature"><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">
+			<label for="alert-time">Alert Time:&#42</label>
+		</div>
+		<div class="col-sm-3">
+			<div class="input-group bootstrap-timepicker timepicker">
+		        <input id="timepicker1" type="text" class="form-control input-small" />
+		        <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
+			</div>	
+			<script type="text/javascript">
+		        $("#timepicker1").timepicker({
+		        	minuteStep: 30,
+		        	icons: {
+					    up: 'glyphicon glyphicon-chevron-up',
+					    down: 'glyphicon glyphicon-chevron-down'
+					}
+		        });
+		    </script>
+	    </div>
+    </div>
+    <div class="row">
+    	<input type="submit" value="Submit">
+    </div>
+</body>
+</html>
